@@ -61,7 +61,7 @@ export default function Home() {
       zIndex: -1, // Set a negative z-index to position the image behind other content
     }}
   />
-      <h1 className=" font-semibold text-lg sm:text-base">Heyy, Will you be my Valentines?</h1>
+      <h1 className=" font-semibold text-3xl sm:text-xl md:text-xl">Heyy, Will you be my Valentines?</h1>
 
       <div className="grid gap-4 grid-cols-2 content-center">
         <div>
@@ -81,7 +81,7 @@ export default function Home() {
       {/* 👇️ show elements on click */}
       {isShown && (
         <div>
-         <h1 className=" font-bold text-xl text-red-600">Wooooooooooh!!!🥳🥳🥳</h1>
+         <h1 className=" font-bold text-xl text-red-600">🥳Wooooooooooh!!!🥳</h1>
         </div>
       )}
 
