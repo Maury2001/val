@@ -5,6 +5,7 @@ import giph from "../../public/giphy.gif";
 import gip from "../../public/f.gif";
 import val from "../../public/valentines.jpg";
 import TransitionEffect from "./transition";
+import AnimatedText from "./AnimatedText";
 
 
 
@@ -49,7 +50,7 @@ export default function Home() {
   return (
     <>
     <TransitionEffect/>
-    <main className="flex text-black min-h-screen flex-col items-center w-full justify-between p-24 bg-fixed bg-center bg-cover bg-[url('/val/public/valentines.jpg')]">
+    <main className="flex text-black max-h-screen overflow-hidden flex-col items-center w-full justify-between p-24 bg-fixed bg-center bg-cover bg-[url('/val/public/valentines.jpg')]">
       <Image
         alt="Mountains"
         src={val}
@@ -67,9 +68,13 @@ export default function Home() {
           zIndex: -1,
         }}
       />
-      <h1 className=" font-semibold text-3xl sm:text-xl md:text-xl">
+      <AnimatedText
+      text={"Heyy, Will you be my Valentines?"}
+      
+      />
+      {/* <h1 className=" font-semibold text-3xl sm:text-xl md:text-xl">
         Heyy, Will you be my Valentines?
-      </h1>
+      </h1> */}
 
       <div className="grid gap-4 grid-cols-2 content-center">
         <div>
@@ -110,7 +115,8 @@ export default function Home() {
             </div>
           )}
           {isShown && 
-           <video width="320" height="240" controls autoPlay preload="none">
+           <video width="320" height="240" className="overflow-scroll
+           " controls autoPlay preload="none">
            <source src="/tom-rizzler.mp4" type="video/mp4" />
            
            Your browser does not support the video tag.
