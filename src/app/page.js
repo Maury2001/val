@@ -11,7 +11,7 @@ import TransitionEffect from "./transition";
 export default function Home() {
   const [position, setPosition] = useState({ top: "50%", left: "50%" });
   const [isShown, setIsShown] = useState(false);
-  const [isShow, setIsShow] = useState(false);
+  // const [isShow, setIsShow] = useState(false);
 
 
   
@@ -32,7 +32,7 @@ export default function Home() {
       left: `${newLeft}px`,
     });
 
-    setIsShow((current) => !current);
+    // setIsShow((current) => !current);
   };
 
   const buttonStyle = {
@@ -85,11 +85,11 @@ export default function Home() {
              <Image src={giph} className=" sm:h-48 w-32" alt="Somethings supposed to happen" />
             </div>
           )}
-          {isShow && (
+          {/* {isShow && (
             <div>
              <Image src={gip} className=" sm:h-48 w-32" alt="Somethings supposed to happen" />
             </div>
-          )}
+          )} */}
         </div>
        
 
