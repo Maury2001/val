@@ -2,13 +2,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import giph from "../../public/giphy.gif";
+import gip from "../../public/f.gif";
 import val from "../../public/valentines.jpg";
 import TransitionEffect from "./transition";
+
 
 
 export default function Home() {
   const [position, setPosition] = useState({ top: "50%", left: "50%" });
   const [isShown, setIsShown] = useState(false);
+  const [isShow, setIsShow] = useState(false);
 
 
   
@@ -29,7 +32,7 @@ export default function Home() {
       left: `${newLeft}px`,
     });
 
-    
+    setIsShow((current) => !current);
   };
 
   const buttonStyle = {
@@ -77,7 +80,20 @@ export default function Home() {
           >
             Hell No
           </button>
+          {isShown && (
+            <div>
+             <Image src={giph} className=" sm:h-48 w-32" alt="Somethings supposed to happen" />
+            </div>
+          )}
+          {isShow && (
+            <div>
+             <Image src={gip} className=" sm:h-48 w-32" alt="Somethings supposed to happen" />
+            </div>
+          )}
         </div>
+       
+
+      
         <div>
           <button
             className=" bg-pink-500 p-5 rounded-2xl"
@@ -93,7 +109,14 @@ export default function Home() {
               </h1>
             </div>
           )}
-          {isShown && <Image src={giph} className=" sm:h-48 w-32" alt="Somethings supposed to happen" />}
+          {isShown && 
+           <video width="320" height="240" controls autoPlay preload="none">
+           <source src="/tom-rizzler.mp4" type="video/mp4" />
+           
+           Your browser does not support the video tag.
+         </video>
+          }
+          {/*  */}
         </div>
       </div>
     </main>
